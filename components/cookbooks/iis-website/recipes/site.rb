@@ -64,6 +64,7 @@ iis_app_pool platform_name do
   recycling_log_event_on_recycle ["Time", "Requests", "Schedule", "Memory", "IsapiUnhealthy", "OnDemand", "ConfigChange", "PrivateMemory"]
   process_model_user_name site.process_model_user_name if identity_type == 'SpecificUser'
   process_model_password site.process_model_password if identity_type == 'SpecificUser'
+  enable32_bit_app_on_win64 site.enable32_bit_app_on_win64.to_bool
   action [:create, :update]
 end
 

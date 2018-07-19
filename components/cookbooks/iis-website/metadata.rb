@@ -265,6 +265,16 @@ attribute 'process_model_password',
     :filter    => {'all' => {'visible' => 'identity_type:eq:SpecificUser'}}
   }
 
+attribute 'enable32_bit_app_on_win64',
+  :description => 'Enable 32-Bit Applications',
+  :default     => 'false',
+  :format      => {
+    :help      => 'Select the option if you want to run 32-bit application under IIS on a 64-bit machine',
+    :category  => '4.IIS Application Pool',
+    :form     => {'field' => 'checkbox'},
+    :order     => 5
+  }
+
 
 attribute 'enable_static_compression',
   :description => 'Enable static compression',
